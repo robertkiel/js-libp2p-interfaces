@@ -210,7 +210,7 @@ class Connection {
    */
   async close () {
     this.streams.map(s => s.close && s.close())
-    
+
     if (this.stat.status === Status.CLOSED) {
       return
     }
